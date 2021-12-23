@@ -2,7 +2,13 @@ USE Design;
 
 SELECT TOP(5) *
 FROM dbo.reviews;
-GO
+GO 
+
+SELECT product_name, 
+       SUM(price)
+FROM poducts
+GROUP BY product_name
+ORDER BY 2 desc;
 
 -- Create a view
 CREATE VIEW top_score_2017 AS
